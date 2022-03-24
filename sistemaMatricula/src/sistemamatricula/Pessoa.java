@@ -24,6 +24,8 @@ public abstract class Pessoa {
         this.cpf = cpf;
     }
 
+    public abstract void acao();
+    
     public String getNome() {
         return nome;
     }

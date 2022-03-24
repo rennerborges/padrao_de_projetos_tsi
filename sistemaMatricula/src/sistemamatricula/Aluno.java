@@ -19,6 +19,11 @@ public class Aluno extends Pessoa {
         this.matricula = matricula;
     }
 
+    @Override
+    public void acao(){
+        System.out.println("Estudar!");
+    }
+    
     public String getMatricula() {
         return matricula;
     }

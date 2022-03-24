@@ -19,6 +19,12 @@ public class Professor extends Pessoa {
         this.especializacao = especializacao;
     }
 
+    @Override
+    public void acao(){
+        System.out.println("Ministrar aula!");
+    }
+    
+    
     public String getEspecializacao() {
         return especializacao;
     }
