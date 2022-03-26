@@ -26,12 +26,34 @@ public class Turma extends RegrasInstituicao {
         this.dataInicio = dataInicio;
         this.dataFim = dataFim;
     }
+    
+    private Aluno getAluno(String cpf){
+        for(Aluno aluno : this.alunos){
+            if(aluno.getCpf().equals(cpf)){ 
+                return aluno;
+            }
+        }
+        return null;
+    }
+    
+    private Disciplina getDisciplina(String nome){
+        for(Disciplina disciplina : this.disciplinas){
+            if(disciplina.getNome().equals(nome)){ 
+                return disciplina;
+            }
+        }
+        return null;
+    }
 
     public ArrayList<Aluno> getAlunos() {
         return alunos;
     }
 
     public void addAlunos(Aluno aluno) {
+        if(getAluno(aluno.getCpf()) != null){
+            throw new RuntimeException("O aluno já está nessa turma");
+        }
+        
         this.alunos.add(aluno);
     }
 
@@ -40,6 +62,9 @@ public class Turma extends RegrasInstituicao {
     }
 
     public void addDisciplinas(Disciplina disciplina) {
+        if(getDisciplina(disciplina.getNome()) != null){
+            throw new RuntimeException("A disciplina já está nessa turma");
+        }
         this.disciplinas.add(disciplina);
     }
 
