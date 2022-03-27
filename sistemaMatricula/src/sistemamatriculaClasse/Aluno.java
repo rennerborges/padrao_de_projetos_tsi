@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package sistemamatricula;
+package sistemamatriculaClasse;
 
 import java.util.Date;
 import java.util.Objects;
@@ -56,7 +56,10 @@ public class Aluno extends Pessoa {
 
     @Override
     public String toString() {
-        return "Aluno{" + "matricula=" + matricula + '}';
+        return "Aluno{" + "matricula=" + matricula + ' ' + super.toString()+ '}' ;
     }
+
+    
+
     
 }

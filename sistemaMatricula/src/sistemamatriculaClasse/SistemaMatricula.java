@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package sistemamatricula;
+package sistemamatriculaClasse;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -43,6 +43,8 @@ public class SistemaMatricula {
         
         System.out.println("turma1: "+ turma1.print());
         System.out.println("padraoProjetos1: "+ padraoProjetos.print()); 
+        System.out.println("Alunos da turma1: "+ turma1.getAlunos()); 
+
     }
     
 }
