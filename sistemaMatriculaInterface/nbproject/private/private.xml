@@ -5,9 +5,13 @@
         <group>
             <file>file:/home/renner/Desenvolvimento/Faculdade/padrao_de_projetos_tsi/sistemaMatriculaInterface/src/sistemamatriculaClasse/Turma.java</file>
             <file>file:/home/renner/Desenvolvimento/Faculdade/padrao_de_projetos_tsi/sistemaMatriculaInterface/src/sistemamatriculaClasse/interfaces/DisciplinaInterface.java</file>
+            <file>file:/home/renner/Desenvolvimento/Faculdade/padrao_de_projetos_tsi/sistemaMatriculaInterface/src/sistemamatriculaClasse/Professor.java</file>
+            <file>file:/home/renner/Desenvolvimento/Faculdade/padrao_de_projetos_tsi/sistemaMatriculaInterface/src/sistemamatriculaClasse/RegrasInstituicao.java</file>
             <file>file:/home/renner/Desenvolvimento/Faculdade/padrao_de_projetos_tsi/sistemaMatriculaInterface/src/sistemamatriculaClasse/Disciplina.java</file>
+            <file>file:/home/renner/Desenvolvimento/Faculdade/padrao_de_projetos_tsi/sistemaMatriculaInterface/src/sistemamatriculaClasse/Aluno.java</file>
             <file>file:/home/renner/Desenvolvimento/Faculdade/padrao_de_projetos_tsi/sistemaMatriculaInterface/src/sistemamatriculaClasse/SistemaMatricula.java</file>
             <file>file:/home/renner/Desenvolvimento/Faculdade/padrao_de_projetos_tsi/sistemaMatriculaInterface/src/sistemamatriculaClasse/interfaces/TurmaInterface.java</file>
+            <file>file:/home/renner/Desenvolvimento/Faculdade/padrao_de_projetos_tsi/sistemaMatriculaInterface/src/sistemamatriculaClasse/Pessoa.java</file>
         </group>
     </open-files>
 </project-private>

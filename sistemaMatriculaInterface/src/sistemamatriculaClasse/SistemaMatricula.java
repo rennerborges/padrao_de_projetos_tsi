@@ -35,14 +35,14 @@ public class SistemaMatricula {
         turma1.addDisciplinas(redes);
 //        turma1.addDisciplinas(redes);
 
-        turma1.addAlunos(renner);
+        turma1.createMatricula(renner, "123");
         
         renner.acao();
         profFernando.acao();
         
         System.out.println("turma1: "+ turma1.print());
         System.out.println("padraoProjetos1: "+ padraoProjetos.print()); 
-        System.out.println("Alunos da turma1: "+ turma1.getAlunos()); 
+        System.out.println("Alunos da turma1: "+ turma1.getMatriculas()); 
 
     }
     

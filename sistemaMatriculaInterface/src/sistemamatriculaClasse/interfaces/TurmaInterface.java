@@ -8,19 +8,19 @@ import java.util.ArrayList;
 import java.util.Date;
 import sistemamatriculaClasse.Aluno;
 import sistemamatriculaClasse.Disciplina;
+import sistemamatriculaClasse.Matricula;
 
 /**
  *
  * @author renner
  */
 public interface TurmaInterface{
-    public Aluno getAluno(String cpf);
     
     public Disciplina getDisciplina(String nome);
 
-    public ArrayList<Aluno> getAlunos();
+    public ArrayList<Matricula> getMatriculas();
 
-    public void addAlunos(Aluno aluno);
+    public void addMatricula(Matricula matricula);
 
     public ArrayList<Disciplina> getDisciplinas();
 

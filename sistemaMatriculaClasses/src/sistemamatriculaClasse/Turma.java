@@ -13,7 +13,7 @@ import java.util.Objects;
  * @author renner
  */
 public class Turma extends RegrasInstituicao {
-    private ArrayList<Aluno> alunos = new ArrayList<>();
+    private ArrayList<Matricula> matriculas = new ArrayList<>();
     private ArrayList<Disciplina> disciplinas = new ArrayList<>();
     private String nome;
     private String periodo;
@@ -27,10 +27,10 @@ public class Turma extends RegrasInstituicao {
         this.dataFim = dataFim;
     }
     
-    private Aluno getAluno(String cpf){
-        for(Aluno aluno : this.alunos){
-            if(aluno.getCpf().equals(cpf)){ 
-                return aluno;
+    private Matricula getMatricula(String cpf){
+        for(Matricula matricula : this.matriculas){
+            if(matricula.getAluno().getCpf().equals(cpf)){ 
+                return matricula;
             }
         }
         return null;
@@ -45,16 +45,26 @@ public class Turma extends RegrasInstituicao {
         return null;
     }
 
-    public ArrayList<Aluno> getAlunos() {
-        return alunos;
+    public ArrayList<Matricula> getMatriculas() {
+        return this.matriculas;
     }
 
-    public void addAlunos(Aluno aluno) {
-        if(getAluno(aluno.getCpf()) != null){
+    public void addMatricula(Matricula matricula) {
+        if(getMatricula(matricula.getAluno().getCpf()) != null){
             throw new RuntimeException("O aluno já está nessa turma");
         }
         
-        this.alunos.add(aluno);
+        this.matriculas.add(matricula);
+    }
+    
+    public void createMatricula(Aluno aluno, String codigo){
+        if(getMatricula(aluno.getCpf()) != null){
+            throw new RuntimeException("O aluno já está nessa turma");
+        }
+        
+        Matricula matricula = new Matricula(aluno, codigo);
+        
+        matriculas.add(matricula);
     }
 
     public ArrayList<Disciplina> getDisciplinas() {
@@ -108,7 +118,7 @@ public class Turma extends RegrasInstituicao {
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 47 * hash + Objects.hashCode(this.alunos);
+        hash = 47 * hash + Objects.hashCode(this.matriculas);
         hash = 47 * hash + Objects.hashCode(this.disciplinas);
         hash = 47 * hash + Objects.hashCode(this.nome);
         hash = 47 * hash + Objects.hashCode(this.periodo);
@@ -135,7 +145,7 @@ public class Turma extends RegrasInstituicao {
         if (!Objects.equals(this.periodo, other.periodo)) {
             return false;
         }
-        if (!Objects.equals(this.alunos, other.alunos)) {
+        if (!Objects.equals(this.matriculas, other.matriculas)) {
             return false;
         }
         if (!Objects.equals(this.disciplinas, other.disciplinas)) {
@@ -149,7 +159,7 @@ public class Turma extends RegrasInstituicao {
 
     @Override
     public String toString() {
-        return "Turma{" + "alunos=" + alunos + ", disciplinas=" + disciplinas + ", nome=" + nome + ", periodo=" + periodo + ", dataInicio=" + dataInicio + ", dataFim=" + dataFim + '}';
+        return "Turma{" + "matriculas=" + matriculas + ", disciplinas=" + disciplinas + ", nome=" + nome + ", periodo=" + periodo + ", dataInicio=" + dataInicio + ", dataFim=" + dataFim + '}';
     }
 
     
