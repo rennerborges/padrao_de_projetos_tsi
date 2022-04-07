@@ -10,7 +10,7 @@ import java.util.Objects;
  *
  * @author renner
  */
-public class Matricula {
+public class Matricula extends RegrasInstituicao{
     private Aluno aluno;
     private String numero;
 
@@ -33,6 +33,11 @@ public class Matricula {
 
     public void setNumero(String numero) {
         this.numero = numero;
+    }
+    
+    @Override
+    public String print(){
+        return this.toString();
     }
 
     @Override
