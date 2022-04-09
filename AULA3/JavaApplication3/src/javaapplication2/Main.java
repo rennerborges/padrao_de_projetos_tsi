@@ -5,6 +5,8 @@
 package javaapplication2;
 
 //import SRP.Error.User;
+import ISP.Correct.Papagaio;
+import ISP.Error.Pinguim;
 import SRP.Correct.User;
 import SRP.Correct.UserRepository;
 import SRP.Correct.UserViewer;
@@ -64,6 +66,12 @@ public class Main {
         example.run();
 
 //  FIM LSP
+
+//  Inicio ISP
+        Papagaio papagaio = new Papagaio();
+        Pinguim pinguim = new Pinguim();
+
+//  FIM ISP
 
     }
     
