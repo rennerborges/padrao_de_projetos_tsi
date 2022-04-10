@@ -4,9 +4,12 @@
  */
 package javaapplication2;
 
-//import SRP.Error.User;
+import DIP.Correct.Lampada;
+
 import ISP.Correct.Papagaio;
 import ISP.Error.Pinguim;
+
+//import SRP.Error.User;
 import SRP.Correct.User;
 import SRP.Correct.UserRepository;
 import SRP.Correct.UserViewer;
@@ -72,6 +75,10 @@ public class Main {
         Pinguim pinguim = new Pinguim();
 
 //  FIM ISP
+
+//  Inicio DIP
+        Lampada lampada = new Lampada();
+//  FIM DIP
 
     }
     
