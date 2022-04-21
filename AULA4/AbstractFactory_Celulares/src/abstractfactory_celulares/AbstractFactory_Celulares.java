@@ -14,7 +14,7 @@ public class AbstractFactory_Celulares {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        IFabricaDeTelefones motorola = new Fabrica_Samsung();
+        IFabricaDeTelefones motorola = new Fabrica_Motorola();
         
         ITelefoneIntermediario motoG = motorola.criarTelefoneIntermediario();
         
