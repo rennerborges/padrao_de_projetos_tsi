@@ -36,6 +36,7 @@ public class Login {
         String user = JOptionPane.showInputDialog("Informe o usuário:");
 
         String password = JOptionPane.showInputDialog("Informe a senha:");
+        
         if(!user.equals("renner") || !password.equals("12345678")){
             throw new RuntimeException("Usuário/Senha inválidos");
         }
