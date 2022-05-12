@@ -18,7 +18,7 @@ public class Veiculo extends Componente implements IProtocolo {
         this.preco = 0;
         
         for(int i = 0; i < componentes.size(); i++){
-            this.preco = this.preco + componentes.get(i).preco;
+            this.preco += componentes.get(i).preco;
         }
               
         return(this.preco);

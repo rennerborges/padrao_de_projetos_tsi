@@ -8,7 +8,7 @@ package automeveisbuild;
  *
  * @author renner
  */
-public class BuildCarroPopular implements IBuilderProtocolo {
+public class BuilderCarroPopular implements IBuilderProtocolo {
     public Veiculo veiculo = new Veiculo();
      
     @Override

@@ -22,17 +22,18 @@ public class Main {
         String volumeMotor= "1";
         String tipoCombustivel = "1";
         String tipo = "1";
+
         Veiculo veiculo = new Veiculo();
         
         tipo = JOptionPane.showInputDialog("Informe o tipo de Veiculo: 1 - Popular, 2 - Top ou 3 - Personalizado");
         
         if(tipo.equals("1")){
-            IBuilderProtocolo carro = new BuildCarroPopular();
+            IBuilderProtocolo carro = new BuilderCarroPopular();
             veiculo = carro.configuracao(roda, numeroPortas, volumeMotor, tipoCombustivel);  
         }
                
         if(tipo.equals("2")){
-            IBuilderProtocolo carro = new BuildCarroTop();
+            IBuilderProtocolo carro = new BuilderCarroTop();
             veiculo = carro.configuracao(roda, numeroPortas, volumeMotor, tipoCombustivel);  
         }
         
@@ -42,7 +43,7 @@ public class Main {
             volumeMotor = JOptionPane.showInputDialog("Informe o volume m³ do motor: 1 - 1000m³, 2 - 1600m³ ou 3 - 2000m³");
             tipoCombustivel = JOptionPane.showInputDialog("Informe o tipo de combustivel: 1 - Gasolina ou  2 - Flex");
           
-            IBuilderProtocolo carro = new BuildCarroPersonalizado();
+            IBuilderProtocolo carro = new BuilderCarroPersonalizado();
             veiculo = carro.configuracao(roda, numeroPortas, volumeMotor, tipoCombustivel);  
         }
         

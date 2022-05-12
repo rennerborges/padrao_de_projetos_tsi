@@ -8,10 +8,10 @@ package automeveisbuild;
  *
  * @author renner
  */
-public class BuildCarroTop implements IBuilderProtocolo{
+public class BuilderCarroTop implements IBuilderProtocolo{
      public Veiculo veiculo = new Veiculo();
      
-     @Override
+    @Override
     public Veiculo configuracao(String roda, String numeroPortas, String volumeMotor, String tipoCombustivel){
         Componente tamanhoRoda = new Roda15("Roda 15 da Goodware", 6000);
         this.veiculo.adicionaComponente(tamanhoRoda);
