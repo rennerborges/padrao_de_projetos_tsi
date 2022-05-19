@@ -13,10 +13,9 @@ import java.util.ArrayList;
 public abstract class BancoDados {
     protected String nome;
     
-    public abstract boolean isMultipleInstance();
+    public abstract boolean isMultipleUser();
     public abstract boolean isMultipleTransaction();
     
-//    public abstract ArrayList<String> getUsers();
-//    public abstract ArrayList<String> getCompanies();
+    public abstract ArrayList<String> getUsers();
 
 }

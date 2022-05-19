@@ -4,25 +4,33 @@
  */
 package clientsadapter;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author renner
  */
-public class Paradox {
-    private String nome = "Paradox";
-    private int qtdUser = 1;
+public class Firebird {
+    private String nome = "Firebird";
+    private boolean isMultipleUsers = true;
     private int qtdTransaction = 1;
+    private ArrayList<String> users = new ArrayList<>();
+
+    public Firebird() {
+        users.add("Fernando");
+        users.add("Daniel");
+    }
     
-    public String getUser(){
-        return "Rafael";
+    public ArrayList<String> getUsers(){
+        return users;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public int getQtdUser() {
-        return qtdUser;
+    public boolean multipleUsers() {
+        return isMultipleUsers;
     }
 
     public int getQtdTransaction() {

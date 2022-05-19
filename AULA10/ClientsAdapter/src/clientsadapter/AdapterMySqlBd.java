@@ -10,27 +10,25 @@ import java.util.ArrayList;
  *
  * @author renner
  */
-public class AdapterParadoxBd extends BancoDados {
-    private Paradox paradox = new Paradox();
+public class AdapterMySqlBd extends BancoDados {
+    private MySql mysql = new MySql();
 
-    public AdapterParadoxBd() {
-        this.nome = paradox.getNome();
+    public AdapterMySqlBd() {
+        this.nome = mysql.getNome();
     }
     
     @Override
     public boolean isMultipleUser(){
-        return paradox.getQtdUser() != 1;
+        return mysql.isMultipleUsers();
     }
     
     @Override
     public boolean isMultipleTransaction(){
-        return paradox.getQtdTransaction() != 1;
+        return mysql.isMultipleTransactions();
     }
     
     @Override
     public ArrayList<String> getUsers(){
-        ArrayList<String> users = new ArrayList<>();
-        users.add(paradox.getUser());
-        return users;
+        return mysql.getUsers();
     }
 }

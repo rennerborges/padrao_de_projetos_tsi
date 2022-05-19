@@ -10,27 +10,25 @@ import java.util.ArrayList;
  *
  * @author renner
  */
-public class AdapterParadoxBd extends BancoDados {
-    private Paradox paradox = new Paradox();
+public class AdapterFirebirdBd extends BancoDados {
+    private Firebird firebird = new Firebird();
 
-    public AdapterParadoxBd() {
-        this.nome = paradox.getNome();
+    public AdapterFirebirdBd() {
+        this.nome = firebird.getNome();
     }
     
     @Override
     public boolean isMultipleUser(){
-        return paradox.getQtdUser() != 1;
+        return firebird.multipleUsers();
     }
     
     @Override
     public boolean isMultipleTransaction(){
-        return paradox.getQtdTransaction() != 1;
+        return firebird.getQtdTransaction() != 1;
     }
     
     @Override
     public ArrayList<String> getUsers(){
-        ArrayList<String> users = new ArrayList<>();
-        users.add(paradox.getUser());
-        return users;
+        return firebird.getUsers();
     }
 }
