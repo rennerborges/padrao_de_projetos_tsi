@@ -30,7 +30,6 @@ public class Login {
         
         if(isLogin){
             throw new RuntimeException("Já existe um login ativo no momento");
-
         }
         
         String user = JOptionPane.showInputDialog("Informe o usuário:");
