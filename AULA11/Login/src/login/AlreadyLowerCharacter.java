@@ -3,27 +3,29 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package login;
-import java.util.regex.*;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  *
  * @author renner
  */
+public class AlreadyLowerCharacter extends PasswordChain {
 
-public class AlreadyCaracterMaiusculo extends PasswordChain {
-
-    public AlreadyCaracterMaiusculo(IDStagePassword id, String description) {
+    public AlreadyLowerCharacter(IDStagePassword id, String description) {
         super(id, description);
     }
     
     @Override
     public boolean isValidPassword(String password){
-        return isCapitalCharacterPresent(password);
+        return isLowerCharacterPresent(password);
     }
     
-    private boolean isCapitalCharacterPresent(String str)
+    private boolean isLowerCharacterPresent(String str)
     {
         
-        String regex = "^(?=.*[A-Z]).+$";
+        String regex = "^(?=.*[a-z]).+$";
  
         Pattern p = Pattern.compile(regex);
  

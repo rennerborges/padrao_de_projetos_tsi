@@ -11,21 +11,21 @@ import java.util.regex.Pattern;
  *
  * @author renner
  */
-public class AlreadyCaracterMinusculo extends PasswordChain {
+public class AlreadySpecialCharacter extends PasswordChain {
 
-    public AlreadyCaracterMinusculo(IDStagePassword id, String description) {
+    public AlreadySpecialCharacter(IDStagePassword id, String description) {
         super(id, description);
     }
     
     @Override
     public boolean isValidPassword(String password){
-        return isLowerCharacterPresent(password);
+        return isSpecialCharacterPresent(password);
     }
     
-    private boolean isLowerCharacterPresent(String str)
+    private boolean isSpecialCharacterPresent(String str)
     {
         
-        String regex = "^(?=.*[a-z]).+$";
+        String regex = "^(?=.*[@#$%&*]).+$";
  
         Pattern p = Pattern.compile(regex);
  

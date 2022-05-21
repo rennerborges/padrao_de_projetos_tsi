@@ -17,13 +17,15 @@ public class Main {
         // TODO code application logic here
 
         PasswordChain passwordChain = new IsLogin(IDStagePassword.STAGE1, "Verificar se o usuário está logado");
-        passwordChain.setNext(new AlreadyCaracterMaiusculo(IDStagePassword.STAGE2, "Se a senha tem um caractere em maiúsculo"));
-        passwordChain.setNext(new AlreadyCaracterMinusculo(IDStagePassword.STAGE3, "Se a senha possui um caractere em minúsculo"));
+        passwordChain.setNext(new AlreadyCapitalCharacter(IDStagePassword.STAGE2, "Se a senha tem um caractere em maiúsculo"));
+        passwordChain.setNext(new AlreadyLowerCharacter(IDStagePassword.STAGE3, "Se a senha possui um caractere em minúsculo"));
+        passwordChain.setNext(new AlreadySpecialCharacter(IDStagePassword.STAGE4, "Se a senha possui pelo menos um dos caractere especial (Ex.: @, #, $, %, &, *)"));
+        passwordChain.setNext(new AlreadyNumberCharacter(IDStagePassword.STAGE5, "Se a senha possui um número"));
 
         try {
-            passwordChain.verifyPassword("123mR@");
+            passwordChain.verifyPassword("123mR*");
         } catch (Exception e) {
-            System.out.println("Erro: "  + e.getMessage());
+            System.out.println("Erro: " + e.getMessage());
         }
     }
 
