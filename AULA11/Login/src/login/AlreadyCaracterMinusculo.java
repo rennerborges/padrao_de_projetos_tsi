@@ -4,6 +4,9 @@
  */
 package login;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  *
  * @author renner
@@ -16,6 +19,22 @@ public class AlreadyCaracterMinusculo extends PasswordChain {
     
     @Override
     public boolean isValidPassword(String password){
-        return true;
+        return isLowerCharacterPresent(password);
+    }
+    
+    private boolean isLowerCharacterPresent(String str)
+    {
+        
+        String regex = "^(?=.*[a-z]).+$";
+ 
+        Pattern p = Pattern.compile(regex);
+ 
+        if (str == null) {
+            return false;
+        }
+ 
+        Matcher m = p.matcher(str);
+
+        return m.matches();
     }
 }

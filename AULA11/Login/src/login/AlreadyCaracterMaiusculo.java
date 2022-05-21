@@ -3,11 +3,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package login;
-
+import java.util.regex.*;
 /**
  *
  * @author renner
  */
+
 public class AlreadyCaracterMaiusculo extends PasswordChain {
 
     public AlreadyCaracterMaiusculo(IDStagePassword id, String description) {
@@ -16,6 +17,22 @@ public class AlreadyCaracterMaiusculo extends PasswordChain {
     
     @Override
     public boolean isValidPassword(String password){
-        return true;
+        return isCapitalCharacterPresent(password);
+    }
+    
+    private boolean isCapitalCharacterPresent(String str)
+    {
+        
+        String regex = "^(?=.*[A-Z]).+$";
+ 
+        Pattern p = Pattern.compile(regex);
+ 
+        if (str == null) {
+            return false;
+        }
+ 
+        Matcher m = p.matcher(str);
+
+        return m.matches();
     }
 }

@@ -21,7 +21,7 @@ public class Main {
         passwordChain.setNext(new AlreadyCaracterMinusculo(IDStagePassword.STAGE3, "Se a senha possui um caractere em minúsculo"));
 
         try {
-            passwordChain.verifyPassword("123");
+            passwordChain.verifyPassword("123mR@");
         } catch (Exception e) {
             System.out.println("Erro: "  + e.getMessage());
         }
