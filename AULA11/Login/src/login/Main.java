@@ -21,9 +21,10 @@ public class Main {
         passwordChain.setNext(new AlreadyLowerCharacter(IDStagePassword.STAGE3, "Se a senha possui um caractere em minúsculo"));
         passwordChain.setNext(new AlreadySpecialCharacter(IDStagePassword.STAGE4, "Se a senha possui pelo menos um dos caractere especial (Ex.: @, #, $, %, &, *)"));
         passwordChain.setNext(new AlreadyNumberCharacter(IDStagePassword.STAGE5, "Se a senha possui um número"));
+        passwordChain.setNext(new AlreadySequenceOfNumbers(IDStagePassword.STAGE6, "Se a senha não possui 3 números consecutivos na sequencia (Ex: Ab123)"));
 
         try {
-            passwordChain.verifyPassword("123mR*");
+            passwordChain.verifyPassword("12m2R*");
         } catch (Exception e) {
             System.out.println("Erro: " + e.getMessage());
         }
