@@ -49,7 +49,7 @@ public class Main {
         
         System.out.println("\n--- Banco info ---: ");
         
-        System.out.println("Tipo usuário: " + bancoDados.nome);
+        System.out.println("Banco de dados utilizado: " + bancoDados.nome);
         System.out.println("Multiplos usuários: " + bancoDados.isMultipleUser());
         System.out.println("Multiplas transações: " + bancoDados.isMultipleTransaction());
         System.out.println("Usuários: " + bancoDados.getUsers());
