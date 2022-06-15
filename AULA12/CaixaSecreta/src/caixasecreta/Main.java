@@ -4,8 +4,6 @@
  */
 package caixasecreta;
 
-import static java.lang.Float.max;
-import static java.lang.Float.min;
 import java.util.ArrayList;
 import java.util.Random;
 import javax.swing.JOptionPane;

@@ -23,7 +23,7 @@ public class ProductComposit extends ProductComponent {
             System.out.println(product.nome + ": R$ "+ product.preco
             );
             
-            soma = soma + product.getPreco();
+            soma += product.getPreco();
         }
 
         return (soma);
