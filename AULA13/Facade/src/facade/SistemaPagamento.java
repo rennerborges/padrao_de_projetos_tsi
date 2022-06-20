@@ -20,6 +20,6 @@ public class SistemaPagamento {
     }
 
     public void realizarPagamentoPix(double valor, String chave) {
-        System.out.println("Pagamento de R$:" + valor + " realizado pela chave pix " + chave);
+        System.out.println("Pagamento de R$:" + valor + " realizado para a chave pix " + chave);
     }
 }

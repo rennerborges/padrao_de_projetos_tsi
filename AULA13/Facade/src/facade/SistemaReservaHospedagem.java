@@ -11,16 +11,16 @@ package facade;
 public class SistemaReservaHospedagem {
 
     public void diasDisponiveis() {
-        System.out.println("1- Hotel Beira Lago R$: 200");
+        System.out.println("\n1- Hotel Beira Lago R$: 200");
         System.out.println("2- Pousada instancia R$: 150");
         System.out.println("3- Hotel Pallace R$: 600");
         System.out.println("4- Hotel Hillary R$: 420");
     }
 
-    public double getValor(int qtdPessoas, String horario) {
+    public double getValor(String dia) {
         double valor = 0;
 
-        switch (horario) {
+        switch (dia) {
             case "1":
                 valor = 200;
                 break;

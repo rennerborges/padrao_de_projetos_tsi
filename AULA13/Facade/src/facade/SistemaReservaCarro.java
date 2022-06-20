@@ -11,7 +11,7 @@ package facade;
 public class SistemaReservaCarro {
 
     public void carrosDisponiveis() {
-        System.out.println("1- Polo R$: 600");
+        System.out.println("\n1- Polo R$: 600");
         System.out.println("2- Kwid R$: 450");
         System.out.println("3- Jetta R$: 1200");
         System.out.println("4- Pajero R$: 1500");

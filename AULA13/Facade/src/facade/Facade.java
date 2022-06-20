@@ -30,9 +30,8 @@ public class Facade {
         sistemaReservaHospedagem.diasDisponiveis();
 
         String hospedagem = JOptionPane.showInputDialog("Informe a hospedagem:");
-        String qtdPessoas = JOptionPane.showInputDialog("Informe a quantidade de pessoas:");
 
-        valor += sistemaReservaHospedagem.getValor(Integer.parseInt(qtdPessoas), hospedagem);
+        valor += sistemaReservaHospedagem.getValor(hospedagem);
     }
 
     public void gerenciarReservaAviao() {
@@ -54,7 +53,6 @@ public class Facade {
     }
 
     public void gerenciarPagamento() {
-        sistemaReservaCarro.carrosDisponiveis();
 
         String formaPagamento = JOptionPane.showInputDialog("Informe o a forma de pagamento: 1- Cartão, 2- Dinheiro e 3 - Pix");
 
@@ -71,7 +69,6 @@ public class Facade {
                 break;
             case "3":
                 sistemaPagamento.realizarPagamentoPix(valor, "00.619.535/0001-45");
-
                 break;
             default:
                 throw new AssertionError();
